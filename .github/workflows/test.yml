@@ -1,0 +1,23 @@
+on:
+  push:
+    branches: ["release"]
+  pull_request:
+    branches: ["release"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  testRun:
+    name: testRun
+    runs-on: ["self-hosted", "mac"]
+    steps:
+
+      - name: Step One
+        run: |
+          echo "this is step 1"
+
+      - name: Step Two
+        run: |
+          echo "this is step 2"
